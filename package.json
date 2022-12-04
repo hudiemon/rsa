@@ -1,5 +1,5 @@
 {
-  "name": "rsa",
+  "name": "@hudiemon/rsa",
   "version": "0.0.1",
   "description": "",
   "main": "dist/cjs/index.js",
@@ -8,6 +8,7 @@
     "dev": "npm run build && node dist/cjs",
     "build": "father build",
     "build:deps": "father prebundle",
+    "publish": "npm publish",
     "prepublishOnly": "father doctor && npm run build"
   },
   "keywords": [],
