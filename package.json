@@ -1,7 +1,7 @@
 {
   "name": "@hudiemon/rsa",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于https://ohdave.com/rsa/，用法与实现未做任何修改",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "scripts": {
@@ -10,6 +10,14 @@
     "build:deps": "father prebundle",
     "publish": "npm publish",
     "prepublishOnly": "father doctor && npm run build"
+  },
+  "homepage": "https://github.com/hudiemon/rsa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hudiemon/rsa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hudiemon/rsa/issues"
   },
   "keywords": [
     "rsa",
