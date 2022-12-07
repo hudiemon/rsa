@@ -1,5 +1,5 @@
-import RSAKeyPair, {RSAAPP, setMaxDigits} from "./rsa"
+import RSAKeyPair, {RSAAPP, setMaxDigits, encryptedString, decryptedString} from "./rsa"
 
-export {RSAAPP, setMaxDigits}
+export {RSAAPP, setMaxDigits, encryptedString, decryptedString}
 
 export default RSAKeyPair
