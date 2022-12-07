@@ -1,6 +1,6 @@
 {
   "name": "@hudiemon/rsa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于https://ohdave.com/rsa/，用法与实现未做任何修改",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
