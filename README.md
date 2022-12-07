@@ -25,3 +25,4 @@ encryptedString(key, "yhDnpHz1LjJjoeAh");
 ## LICENSE
 
 MIT
+
