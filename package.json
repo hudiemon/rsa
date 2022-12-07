@@ -11,8 +11,13 @@
     "publish": "npm publish",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": [],
-  "authors": [],
+  "keywords": [
+    "rsa",
+    "encrypt"
+  ],
+  "authors": [
+    "zhengtan2003"
+  ],
   "license": "MIT",
   "files": [
     "dist",
