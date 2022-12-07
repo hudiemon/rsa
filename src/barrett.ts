@@ -20,7 +20,7 @@ export class Barrett {
     constructor(m: BigInt) {
         this.modulus = biCopy(m);
         this.k = biHighIndex(this.modulus) + 1;
-        var b2k = new BigInt();
+        const b2k = new BigInt();
         b2k.digits[2 * this.k] = 1; // b2k = b^(2k)
         this.mu = biDivide(b2k, this.modulus);
         this.bkplus1 = new BigInt();

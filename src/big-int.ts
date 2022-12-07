@@ -8,7 +8,7 @@ const maxDigitVal = biRadix - 1;
 const maxInteger = 9999999999999998;
 
 let maxDigits = 20;
-let ZERO_ARRAY = Array(maxDigits).fill(0)
+let ZERO_ARRAY: string | any[];
 let bigZero: BigInt;
 let bigOne: BigInt;
 
@@ -28,11 +28,14 @@ export class BigInt {
 
 export function setMaxDigits(value: number) {
     maxDigits = value
-    ZERO_ARRAY = Array(maxDigits).fill(0)
+    ZERO_ARRAY = new Array(maxDigits);
+    for (let iza = 0; iza < ZERO_ARRAY.length; iza++) ZERO_ARRAY[iza] = 0;
     bigZero = new BigInt()
     bigOne = new BigInt()
     bigOne.digits[0] = 1
 }
+
+setMaxDigits(20)
 
 const dpl10 = 15;
 const lr10 = biFromNumber(1000000000000000);
@@ -45,8 +48,8 @@ function biFromDecimal(s: string) {
     if (i == s.length) {
         result = new BigInt();
     } else {
-        var digitCount = s.length - i;
-        var fgl = digitCount % dpl10;
+        const digitCount = s.length - i;
+        let fgl = digitCount % dpl10;
         if (fgl == 0) fgl = dpl10;
         result = biFromNumber(Number(s.substr(i, fgl)));
         i += fgl;
@@ -173,7 +176,7 @@ export function biFromHex(s: string) {
     const result = new BigInt();
     const sl = s.length;
     for (let i = sl, j = 0; i > 0; i -= 4, ++j) {
-        result.digits[j] = hexToDigit(s.substring(Math.max(i - 4, 0), Math.min(i, 4)));
+        result.digits[j] = hexToDigit(s.substr(Math.max(i - 4, 0), Math.min(i, 4)));
     }
     return result;
 }
