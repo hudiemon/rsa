@@ -1,6 +1,7 @@
-import { defineConfig } from 'father';
+import {defineConfig} from 'father';
 
 export default defineConfig({
-  cjs: {},
-  prebundle: {},
+    esm: {},
+    cjs: {},
+    prebundle: {},
 });
